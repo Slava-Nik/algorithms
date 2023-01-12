@@ -1,4 +1,4 @@
-import {lengthOfLongestSubstring, lengthOfLongestSubstringByBruteForce} from './index';
+import {lengthOfLongestSubstringBySlidingWindow, lengthOfLongestSubstringByBruteForce} from './index';
 
 export const dataToTest = [
     [[" "], " "],
@@ -14,7 +14,7 @@ describe('Find longest substring without repeated characters', ()=> {
     test.each(dataToTest)(
         '%#.Sliding window, O(N)',
         (params, result) => {
-            expect(lengthOfLongestSubstring(...params)).toBe(result);
+            expect(lengthOfLongestSubstringBySlidingWindow(...params)).toBe(result);
         }
     );
 

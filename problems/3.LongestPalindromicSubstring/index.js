@@ -25,7 +25,7 @@ export const getLongestPalindromicSubstrBruteForce = (str) => {
 };
 
 
-// Odd and Even palindrome solution (Most efficient, according to the tests)
+// Odd and Even palindrome solution (Much more efficient than bruteforce)
 
 // For "bazdadx" - we should get Odd "dad"
 // We iterate every letter and expand to left and right to find a palindrome.

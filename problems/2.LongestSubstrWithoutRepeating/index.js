@@ -12,7 +12,7 @@ If char exists, delete first character from sliding window and increment start.
 */
 
 
-export const lengthOfLongestSubstring = function (str) {
+export const lengthOfLongestSubstringBySlidingWindow = function (str) {
     let longest = '';
     let start = 0;
     let end = 0;
