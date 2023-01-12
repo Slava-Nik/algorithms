@@ -12,14 +12,14 @@ export const dataToTest = [
 describe('Find longest substring without repeated characters', ()=> {
 
     test.each(dataToTest)(
-        'Sliding window, O(N)',
+        '%#.Sliding window, O(N)',
         (params, result) => {
             expect(lengthOfLongestSubstring(...params)).toBe(result);
         }
     );
 
     test.each(dataToTest)(
-        'Brute force, O(N^3)',
+        '%#.Brute force, O(N^3)',
         (params, result) => {
             expect(lengthOfLongestSubstringByBruteForce(...params)).toBe(result);
         }

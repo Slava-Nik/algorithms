@@ -1,3 +1,7 @@
+/*  Title: Longest Substring Without Repeating Characters
+    Problem complexity: Medium
+    LeetCode: https://leetcode.com/problems/longest-substring-without-repeating-characters/
+*/
 
 /* 1. Plan: sliding window O(n)
 
@@ -71,52 +75,9 @@ export const lengthOfLongestSubstringByBruteForce = function (str) {
     }
     return longest;
 
-}
-
-/*
-My first solution
-Create new substring every iteration of the loop
-Data structure of substrings is object. {indexOfFirstSymbol: Set(symbols in substr)}
-
-If repeated symbol appears - check all substrings with longest and remove it from list. Update longest.
-By the end of loop we'll get the largest substr
-
-
-let longestSubstrSet = new Set();
-let substrings = {};
-
-const updateLongestIfNeeds = (substrSet) => {
-    if (substrSet.size > longestSubstrSet.size) {
-        longestSubstrSet = substrSet;
-    }
 };
 
-for (let i = 0; i < s.length; i++) {
 
-    // check all substrings, update longest
-    for (let substrIdx in substrings) {
-        if (substrings.hasOwnProperty(substrIdx)) {
-            const substrSet = substrings[substrIdx];
-            if (!substrSet.has(s[i])) {
-                substrSet.add(s[i]);
-            } else {
-                delete substrings[substrIdx];
-                substrings[i] = new Set([s[i]]);
-            }
-            updateLongestIfNeeds(substrSet);
-        }
-    }
-
-    // create new substring as a set
-    substrings[i] = new Set([s[i]]);
-    if(longestSubstrSet.size === 0) longestSubstrSet = substrings[i];
-}
-
-console.log(longestSubstrSet);
-return [...longestSubstrSet.values()].join("");
-
-
- */
 
 
 
