@@ -1,4 +1,4 @@
-import {maxArea} from './index';
+import {maxAreaBruteForce, maxAreaTwoPointers} from './index';
 
 type Params = [number[]];
 type Result = number;
@@ -14,9 +14,15 @@ describe('Container With Most Water (Arrays)', () => {
     test.each(dataToTest)(
         '%#. Brute force',
         (params, result) => {
-            expect(maxArea(...params)).toEqual(result);
+            expect(maxAreaBruteForce(...params)).toEqual(result);
         }
     );
 
+    test.each(dataToTest)(
+        '%#. Two pointers',
+        (params, result) => {
+            expect(maxAreaTwoPointers(...params)).toEqual(result);
+        }
+    );
 
 });
